@@ -10,13 +10,6 @@ terraform {
   }
   required_version = ">=1.8.4"
 }
-provider "yandex" {
-  zone = "ru-central1-a"
-}
-provider "docker" {
-  host = "ssh://yc-user@89.169.132.197:22"
-}
-
 resource "random_password" "root_password" {
   length      = 16
   special     = false
