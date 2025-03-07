@@ -1,7 +1,7 @@
 #cloud-config
 ssh_pwauth: no
 users:
-  - name: yc-user
+  - name: ${ssh_user}
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
-    ssh_authorized_keys: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPEzKp2zCcg/XnEqtp7nScb2AZifHbGoJbqhbJ2e3dBz avrjakhov@MacBook-Pro-Alexander.local"
+    ssh_authorized_keys: ${ssh_key}
